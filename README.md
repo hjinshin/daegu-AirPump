@@ -1,5 +1,5 @@
 # daegu-AirPump
-
++ python(3.8)
 
 + ### ScrapeAirPump.py
 1. ScrapAirPump가 대구 자전거 공기주입기의 위치를 스크랩해준다

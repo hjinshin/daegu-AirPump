@@ -25,12 +25,15 @@ for div in divs:
             #상세 주소 저장
             detail_addresses.append(address)
 
+            #마지막에 '.' 입력
+            address = address + '.'
+
             #검색어 변환
             address = address.replace('출입구', '출구') #출입구->출구
-            address = address.replace("(","").replace(")","") #괄호 내용 제거
+            #address = address.replace("(","").replace(")","") #괄호 제거
 
             addresses.append(address)
 
 with open('AirPump.txt','w',encoding='UTF-8') as f:
-    for name in detail_addresses:
+    for name in addresses:
         f.write(name+'\n')

@@ -8,3 +8,7 @@
 
 + ### app.py
 1. 카카오 맵 API를 띄운다
+
++ ### start.sh
+1. 로컬서버(port=9999) 생성
+2. flask 

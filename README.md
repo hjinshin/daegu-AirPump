@@ -1,4 +1,5 @@
 # daegu-AirPump
+### version
 + python(3.8)
 
 + ### ScrapeAirPump.py

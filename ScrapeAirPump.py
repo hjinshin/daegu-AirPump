@@ -1,3 +1,6 @@
+import re
+from pprint import pprint
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -25,12 +28,11 @@ for div in divs:
             #상세 주소 저장
             detail_addresses.append(address)
 
-            #마지막에 '.' 입력
-            address = address + '.'
-
             #검색어 변환
             address = address.replace('출입구', '출구') #출입구->출구
-            #address = address.replace("(","").replace(")","") #괄호 제거
+            #괄호 제거
+            rmve_bracket = "\(.*\)|\s-\s.*"
+            address = re.sub(rmve_bracket, '', address)
 
             addresses.append(address)
 

@@ -25,15 +25,15 @@
 
 	for (var i = 0; i < 10000; i++)
 	{
-		// 주소로 좌표를 검색합니다
-		geocoder.addressSearch(array[i], function(result, status) {
+			// 주소로 좌표를 검색합니다
+			geocoder.addressSearch(array[i], function(result, status) {
 
-			// 정상적으로 검색이 완료됐으면
+				// 정상적으로 검색이 완료됐으면
 				if (status === kakao.maps.services.Status.OK) {
-
 					addMarker(new kakao.maps.LatLng(result[0].y, result[0].x));
 				}
-		});
+			});
+
 	}
 	// 지도에 표시된 마커 객체를 가지고 있을 배열입니다
 	var markers = [];

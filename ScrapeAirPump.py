@@ -1,3 +1,4 @@
+from pprint import pprint
 
 import requests
 from bs4 import BeautifulSoup
@@ -31,15 +32,16 @@ for div in divs:
 
             #검색어 변환
             address = address.replace('출입구', '출구') #출입구->출구
-            address = address.replace('자전거보관대', '') #출입구->출구
-            address = address.replace('(', '').replace(')', '') #출입구->출구
+            address = address.replace('자전거보관대', '') #자전거보관대 삭제
+            address = address.replace('(', ' ').replace(')', ' ') #괄호 삭제
 
             #괄호 제거
             #rmve_bracket = "\(.*\)|\s-\s.*"
             #address = re.sub(rmve_bracket, '', address)
 
+            #address = address.split(' ')
             addresses.append(address)
-
+#pprint(addresses)
 with open('AirPump.txt','w',encoding='UTF-8') as f:
-    for name in addresses:
-        f.write(name+'\n')
+    for i in addresses:
+        f.write( i +'\n')

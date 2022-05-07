@@ -8,7 +8,7 @@ import sys
 sys.path.append("/ScrapeAirPump")
 import ScrapeAirPump as ad
 
-list = ['abc', 'def', 'ghi']
+
 @app.route('/')
 def index():
     return render_template('Map.html', value=ad.addresses)

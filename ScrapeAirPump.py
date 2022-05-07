@@ -1,5 +1,3 @@
-from pprint import pprint
-
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -41,7 +39,7 @@ for div in divs:
 
             #address = address.split(' ')
             addresses.append(address)
-#pprint(addresses)
+
 with open('AirPump.txt','w',encoding='UTF-8') as f:
     for i in addresses:
         f.write( i +'\n')

@@ -22,5 +22,6 @@
 + ### ScrapeAirPump
 1. ScrapeAirPump가 대구 자전거 공기주입기의 위치를 스크랩해준다
 2. 공기주입기 주소를 addresses list에 저장
+3. AirPump.txt에 주소 목록 
 ## 문제점
 1. 데이터 질 쓰레기

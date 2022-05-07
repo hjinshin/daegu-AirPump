@@ -36,6 +36,8 @@ for div in divs:
 
             addresses.append(address)
 
+json_address = addresses.json()
+print(json_address)
 with open('AirPump.txt','w',encoding='UTF-8') as f:
     for name in addresses:
         f.write(name+'\n')

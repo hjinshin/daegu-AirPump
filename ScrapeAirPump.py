@@ -18,7 +18,7 @@ for div in divs:
 
     #td class="tal" 추출
     for link in links:
-        ads = div.findAll('td', {"class":"tal"})
+        ads = link.findAll('td', {"class":"tal"})
 
         for ad in ads:
             # td class="tal" 태그 내부의 텍스트를 리스트에 삽입

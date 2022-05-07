@@ -1,8 +1,7 @@
-import re
-from pprint import pprint
 
 import requests
 from bs4 import BeautifulSoup
+import json
 
 #주소를 저장할 리스트
 detail_addresses = []
@@ -25,19 +24,22 @@ for div in divs:
         for ad in ads:
             # td class="tal" 태그 내부의 텍스트를 리스트에 삽입
             address = ad.text
+            address = '대구광역시 ' + address
             #상세 주소 저장
             detail_addresses.append(address)
 
+
             #검색어 변환
             address = address.replace('출입구', '출구') #출입구->출구
+            address = address.replace('자전거보관대', '') #출입구->출구
+            address = address.replace('(', '').replace(')', '') #출입구->출구
+
             #괄호 제거
-            rmve_bracket = "\(.*\)|\s-\s.*"
-            address = re.sub(rmve_bracket, '', address)
+            #rmve_bracket = "\(.*\)|\s-\s.*"
+            #address = re.sub(rmve_bracket, '', address)
 
             addresses.append(address)
 
-json_address = addresses.json()
-print(json_address)
 with open('AirPump.txt','w',encoding='UTF-8') as f:
     for name in addresses:
         f.write(name+'\n')

@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import json
+
 
 #주소를 저장할 리스트
 detail_addresses = []

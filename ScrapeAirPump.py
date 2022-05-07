@@ -31,7 +31,7 @@ for div in divs:
             #검색어 변환
             address = address.replace('출입구', '출구') #출입구->출구
             address = address.replace('자전거보관대', '') #자전거보관대 삭제
-            address = address.replace('(', ' ').replace(')', ' ') #괄호 삭제
+            #address = address.replace('(', ' ').replace(')', ' ') #괄호 삭제
 
             #괄호 제거
             #rmve_bracket = "\(.*\)|\s-\s.*"

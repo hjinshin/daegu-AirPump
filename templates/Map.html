@@ -4,7 +4,11 @@
 	<meta charset="utf-8"/>
 	<title>대구 공기주입기</title>
 	<script>
-		var array = {{ value|tojson }};
+	//남구(위도 경도 포함)
+		var arrayNamgu = {{ Namgu|tojson }};
+	//서구(위치(도로명) 포함)
+		var arraySeogu = {{ Seogu|tojson }};
+
 	</script>
 </head>
 <body>

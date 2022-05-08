@@ -37,8 +37,8 @@ for div in divs:
             #rmve_bracket = "\(.*\)|\s-\s.*"
             #address = re.sub(rmve_bracket, '', address)
 
-            #address = address.split(' ')
             addresses.append(address)
+
 
 with open('AirPump.txt','w',encoding='UTF-8') as f:
     for i in addresses:

@@ -6,6 +6,7 @@ app.config['JSON_AS_ASCII'] = False
 
 import sys
 sys.path.append("/Namgu")
+sys.path.append("/Seogu")
 import Namgu as Ng
 import Seogu as Sg
 

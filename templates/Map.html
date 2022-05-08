@@ -30,6 +30,8 @@
 	// 마커 이미지의 이미지 주소입니다
 	var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
+
+	//서구
 	for(var i = 0; i < arraySeogu.length; i++)
 	{
 		// 주소로 좌표를 검색합니다
@@ -54,11 +56,23 @@
 		});
 	}
 
-	//남구청 마지막 1개 이상함(경남에 찍힘)
-	for (var i = 0; i < arrayNamgu.length; i++)
+	//남구
+	for (var i = 0; i < arrayNamgu.length-1; i++)
 	{
 		addMarker(new kakao.maps.LatLng(arrayNamgu[i]['위도'], arrayNamgu[i]['경도']));
 	}
+	//남구청 마지막 1개 이상함(경남에 찍힘)
+	if( arrayNamgu.length-1 === i )
+	{
+		// 주소로 좌표를 검색합니다
+		geocoder.addressSearch(arrayNamgu[i]['주소'], function(result, status) {
+			// 정상적으로 검색이 완료됐으면
+			if (status === kakao.maps.services.Status.OK) {
+				addMarker(new kakao.maps.LatLng(result[0].y, result[0].x));
+			}
+		});
+	}
+
 
 
 	// 지도에 표시된 마커 객체를 가지고 있을 배열입니다

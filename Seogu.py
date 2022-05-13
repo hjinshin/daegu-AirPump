@@ -49,14 +49,11 @@ for div in divs:
             addresses.append(infos[1])
 
 
-address_json = []
+body = []
 for cnt in addresses:
     dic = {}
     dic['도로명'] = cnt
-    address_json.append(dic)
-
-
-body = json.dumps(address_json, ensure_ascii=False)
+    body.append(dic)
 
 
 #pprint(body)
